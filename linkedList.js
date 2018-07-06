@@ -69,9 +69,12 @@ function linkedListGenerator() {
 
     if (!currentNode) {
       return false;
-    } else if (!previousNode) {
-      newNode.next = head;
+    } else if (x === 0){
+      newNode.next = currentNode;
       head = newNode;
+    } else if (previousNode.next === null) {
+      newNode.next = tail;
+      previousNode.next = newNode;
     } else {
       newNode.next = currentNode;
       previousNode.next = newNode;
