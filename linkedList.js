@@ -31,7 +31,7 @@ function linkedListGenerator() {
   };
 
   function remove(x) {
-    let currentNode = get(x);
+    let currentNode = get(x);             //can refer to next node via currentNode.next instead of defining nextNode
     let previousNode = get(x - 1);
     let nextNode = get(x + 1);
 
@@ -69,7 +69,7 @@ function linkedListGenerator() {
 
     if (!currentNode) {
       return false;
-    } else if (x === 0){
+    } else if (x === 0) {
       newNode.next = currentNode;
       head = newNode;
     } else if (previousNode.next === null) {
@@ -80,7 +80,7 @@ function linkedListGenerator() {
       previousNode.next = newNode;
     }
   }
-   
+
 
   return {
     getHead: getHead,
